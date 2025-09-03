@@ -1,0 +1,179 @@
+.has {
+  color: brown
+}
+
+#a {
+  border: 0;
+  padding: 0;
+  background-color: none;
+}
+
+#Twhere {
+  color: yellowgreen;
+}
+
+#Not {
+  color: #000000
+}
+
+#NTH-Child {
+  color: brown;
+}
+
+#queris {
+  font-size: 50px;
+}
+
+/*Pseudo clase has*/
+div:has(p):not(.Child) {
+  border: 2px solid red;
+  padding: 10px;
+  background-color: lightyellow;
+}
+
+label:has(input:checked) {
+  color: green;
+  font-weight: bold;
+}
+
+table:has(tr)+p {
+  display: black;
+  color: green;
+}
+
+/*pseudoclase Is*/
+:is(h1, h2, h3) {
+  color: darkblue;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+:is(article, section, aside) a {
+  color: orange;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/*pseudoclase Where*/
+/*comparacion jerarquica entre is, where y clase*/
+/*jerarquia en orden decreciente*/
+
+section:is(.destacado) {
+  padding: ;
+  color: blueviolet
+}
+
+:is(.destacado) {
+  color: blue
+}
+
+.destacado {
+  color: green
+}
+
+section:where(.destacado) {
+  color: yellow
+}
+
+:where(.1) {
+  color: red
+}
+
+section:is(.violeta) {
+  color: blueviolet
+}
+
+:is(.azul) {
+  color: blue
+}
+
+.verde {
+  color: green
+}
+
+section:where(.amarillo) {
+  color: rgb(245, 197, 4)
+}
+
+:where(.rojo) {
+  color: red
+}
+
+/* Mientras que is tiene una especificidad de 1 where tiene 0, lo cual se ve reflejado a traves de sus jerarquia en cuanto a la adopcion de un estilo*)
+
+/*pseudoclase Not*/
+h4:not(.distinto) {
+  color: burlywood;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+/*pseudoclase NTH Child*/
+.Child p:nth-child(2n of p) {
+  color: magenta;
+  font-weight: bolder;
+}
+
+/*pseudoclase Container queris*/
+.tarjeta {
+  border: 2px solid black;
+  padding: 20px;
+  font-size: 16px;
+  width: 100%;
+  max-width: 600px;
+}
+
+.contenedor {
+  container-type: inline-size;
+  width: 100%;
+  border: 1px solid red;
+  padding: 10px;
+  max-width: 800px;
+}
+
+@media (max-width: 600px) {
+  .tarjeta {
+    background-color: turquoise;
+  }
+}
+@container (max-width: 400px) {
+  .tarjeta {
+    background-color: purple;
+  }
+}
+.container {
+  height: 200px;
+  border: 1px solid black;
+  margin: 10px;
+  padding: 10px;
+}
+
+.box{
+  height: 30px;
+  border: 2px solid black;
+  margin: 10px;
+  padding: 10px;
+}
+
+.block .box {
+  display: block;
+}
+
+.inline .box {
+  display: inline-block;;
+}
+.none .box {
+  display: none;
+}
+.flex .box {
+  display: flex;
+  flex-direction: row;
+flex-direction: column-reverse;
+}
+.k{
+  display: flex;
+  flex-direction: row;
+border: 1px solid black;
+justify-content: space-around;
+flex-direction: row-reverse;
+
+}

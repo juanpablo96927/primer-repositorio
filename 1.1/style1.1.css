@@ -1,0 +1,92 @@
+@import "css/header.css";
+@import "css/responsive";
+@import "css/footer.css";
+@import "css/Sobre-Mi.css";
+@import "css/Proyectos.css";
+@import "css/Blog.css";
+@import "css/Referencias.css";
+@import "css/Contactos.css";
+
+
+/* Reset global correcto */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* HEADER */
+#header {
+  background-color: #1d1d1d;
+  position: sticky;
+  width: 100%;
+  top: 0;
+  left: 0;
+  padding: 1px, 16px;
+
+  z-index: 1000;
+
+  /* layout interno: h1 arriba, nav abajo, con poco espacio entre ambos */
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  /* controla la distancia entre h1 y nav: ajusta este valor */
+  align-items: flex-start;
+}
+
+#header h1 {
+  margin: 0;      /* elimina márgenes por defecto */
+  padding: 0;
+  font-size: 2em;
+  color: #fff;
+  line-height: 1;
+}
+
+/* Navegación dentro del header */
+#header nav {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+#header nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+#header nav a {
+  color: #1eaaf1;          /* Light blue color for the link text */
+  text-decoration: underline;  /* Underlines the links */
+  display: inline-block;    /* Allows block properties while staying inline */
+}
+
+/* ESPACIO PARA CONTENIDO: evita que el contenido quede detrás del header fijo.
+   Ajusta padding-top si tu header es más alto o más bajo. */
+body {
+  font-family: Arial, sans-serif;
+  background-color: aquamarine;
+  color: #333;
+  line-height: 1.6;
+  padding-top: 0px; /* <-- ajusta este valor si es necesario */
+}
+
+.section-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* utilidades rápidas */
+.hidden { display: none; }
+.container-inline { display: flex; gap: 12px; align-items: center; }
+'''
+
+#header {
+  display: flex;
+  flex-direction: row;
+}

@@ -1,0 +1,86 @@
+/* Estructura de css
+
+    Selector{
+        propiedad: valor;
+        propiedad2: valor2;
+    }
+*/
+/* Variables */
+:root{
+    --my-text-color: black;
+    --my-background-color: rgb(237, 237, 237);
+}
+@property --my-text-color {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: black;
+}
+
+/* Selector Universal/Global */
+*{
+    margin: 0;
+}
+
+/* Selector de Tipo/Etiqueta */
+p{
+    background-color: red;
+}
+
+/* Selector de Clase */
+.parrafo-class{
+   background-color: blue; 
+}
+
+/* Selector de ID */
+#parrafo-id{
+    background-color: green;
+}
+
+.test-boxmodel{
+    margin: 0 ; /*Todos los lados valen lo mismo*/
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+
+    padding: 0; /*Todos los lados valen lo mismo*/
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+
+    border: 0; /*Todos los lados valen lo mismo*/
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 0;
+    border-left: 0;
+
+    margin: 0 10;
+}
+
+img{
+    width: 50%;
+}
+
+#divIMG{
+    width: 500px;
+}
+.container-parrafo{
+    width: 500px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+#test{
+    width: 50px;
+}
+
+Colors{
+    color: black; /*Color especifico*/
+    color: #fff; /*Color por hexadecimal*/
+    color: #d35c5c; /*Color por hexadecimal*/
+    color: rgb(255, 0, 0); /*Color por rgb*/
+    color: rgba(255, 0, 0, 0.5); /*Color por rgb con transparencia*/
+    color: hsl(hue, saturation, lightness);
+    color: hsla(hue, saturation, lightness, alpha)
+}

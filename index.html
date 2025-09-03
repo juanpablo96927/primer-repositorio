@@ -6,38 +6,42 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Portafolio de desarrollador web">
   <meta name="keywords" content="desarrollador, web, portafolio">
-
-  <title>Portafolio de Juan Pablo</title>
+  <title id="title">Portafolio de Juan Pablo</title>
+  <link rel="stylesheet" href="css/style1.1.css">
 </head>
 
 <body>
-  <p>Contenido...</p>
-  <div>
-    <header>
-      <H1>Portafolio</H1>
-    </header>
-    <nav><a href="">Sobre Mi</a>
-      <a href="">Proyectos</a>
-      <a href="">Blog</a>
-      <a href="">Referencias</a>
-      <a href="">Contacto</a>
-    </nav>
-  </div>
+  <header id="header">
+    <div class="container">
+      <h1id="title">Portafolio</h>
+      <nav>
+        <a href="#section-sobre mi">Sobre Mi</a>
+        <a href="#section-proyectos">Proyectos</a>
+        <a href="#section-blog">Blog</a>
+        <a href="#section-referencias">Referencias</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </div>
+
+  </header>
+
   <main>
-    <section>
+    <!-- Sección Sobre Mi -->
+    <section id="section-sobre-i" class="section-container">
+
       <h2>Sobre Mi</h2>
-      <div>
+      <div class="container">
         <img src="" alt="Foto mia">
         <h3>Juan Pablo Padilla Garcia</h3>
       </div>
-      <div>
-        <p>descripcion personal
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis odit quia rem eaque vel amet architecto
+      <div class="container">
+        <p>descripcion personal<b>Lorem ipsum dolor sit</b>, amet consectetur adipisicing elit. Officiis odit quia rem
+          eaque vel amet architecto
           dolore laudantium facilis, dolorum voluptatibus nesciunt perferendis ipsum itaque odio, deleniti voluptatem
           dicta non!
         </p>
       </div>
-      <div>
+      <div class="container">
         <p>
         <h4><i>Habilidades</i></h4>
         </p>
@@ -51,45 +55,100 @@
       </div>
     </section>
 
-    <section>
+    <!-- Sección Proyectos -->
+    <section id="section-proyectos" class="section-container">
       <h2>Proyectos</h2>
-    </section>
-    <div>
-      <div>
-        <img src="" alt="Imagen del proyecto">
-        <div>
-          <h4>T[itulo del proyecto</h4>
+      <img src="https://www.designbooststudio.com/wp-content/uploads/2020/05/DISENO-DESARROLLO-WEB-MADRID.jpg"
+        alt="Imagen genérica de proyectos" height="300" width="600">
+      <div class="container">
+        <h4>Titulo del proyecto</h4>
+        <img src="https://tse2.mm.bing.net/th/id/OIP.oLFLTdgyYd3ILOdDdTux2gHaHa?rs=1&pid=ImgDetMain&o=7&rm=3"
+          alt="Imagen del proyecto" width="300" height="300">
+        <div class="container">
           <p>Descripcion del proyecto</p>
           <a href="">Link del Proyecto</a>
         </div>
       </div>
-    </div>
-    <section>
-      <h2>Blog</h2>
-    </section>
-      <div>
-        <button>Crear post</button>
-      </div>
-    <section>
-      <h2>Referencias</h2>
-      <div>
-        <div>
-          <img src="https://www" alt="Imagen de la referencia">
-          <div>
-            <p>Descripcion de la referencia</p>
-            <h4>Nombre Cargo de la Referencia</h4>
-          </div>
+
+      <div class="container">
+        <h4>Titulo del proyecto</h4>
+        <img src="https://conceptodefinicion.de/wp-content/uploads/2014/05/Imagen-2.jpg" alt="Imagen del proyecto"
+          width="300" height="300">
+        <div class="container">
+          <p>Descripcion del proyecto</p>
+          <a href="">Link del Proyecto</a>
         </div>
+      </div>
+
+      <div class="container">
+        <h4>Titulo del proyecto</h4>
+        <img
+          src="https://s3.amazonaws.com/cdn.wp.m4ecnet/wp-content/uploads/2018/01/16095118/Depositphotos_3667865_m-2015-compressor.jpg"
+          alt="Imagen del proyecto" width="300" height="300">
+        <div class="container">
+          <p>Descripcion del proyecto</p>
+          <a href="">Link del Proyecto</a>
+        </div>
+      </div>
       </div>
     </section>
 
-    <section>
+    <!-- Sección Blog -->
+    <section id="section-blog" class="section-container">
+      <h2>Blog</h2>
+      <section id="section-blog" class="section-container">
+        <div class="container">
+          <button>Crear post</button>
+        </div>
+      </section>
+    </section>
+
+    <!-- Referencias -->
+    <section id="section-referencias" class="section-container">
+
+
+      <h2>Referencias</h2>
+      <div class="container">
+        <div class="container">
+          <img
+            src="https://preview.redd.it/hola-le-pedi-a-la-ia-dall-e-que-generara-im%C3%A1genes-de-una-v0-e3mnp8vpajmc1.jpg?width=1080&format=pjpg&auto=webp&s=27b385d35e2d035c05510e415eb0030cbfe50ce4"
+            width="300" height="300">
+
+          <div class="container">
+            <p>Descripcion de la referencia</p>
+            <h4>Nombre Cargo de la Referencia</h4>
+          </div>
+
+          <div class="container">
+            <img src="https://tse1.mm.bing.net/th/id/OIP.7qsMn31OnlyNddTH7VRUgAHaFq?rs=1&pid=ImgDetMain&o=7&rm=3"
+              width="300" height="300">
+
+            <div class="container">
+              <p>Descripcion de la referencia</p>
+              <h4>Nombre Cargo de la Referencia</h4>
+            </div>
+
+            <div class="container">
+              <img
+                src="https://tse1.explicit.bing.net/th/id/OIP.Y7GbuzwBG_c5idfg6RZ-gQHaHa?rs=1&pid=ImgDetMain&o=7&rm=3"
+                width="300" height="300">
+
+              <div class="container">
+                <p>Descripcion de la referencia</p>
+                <h4>Nombre Cargo de la Referencia</h4>
+              </div>
+            </div>
+    </section>
+
+    <!-- Sección Contacto -->
+    <section id="contacto" class="section-container
       <h2>Contacto</h2>
       <form>
-        <label for=""inp-Nombre Usuario">Datos personales</label>
-        <input type="name" name=""inp-Nombre Usuario" id=""inp-Nombre Usuario" placeholder="Nombre">
-        <input type="email" name=""inp-Email Usuario" id=""inp-Email Usuario" placeholder="Email">
-        <input type="password" name=""inp-Contrasena Usuario" id=""inp-Contrasena Usuario" placeholder="contraseña">
+        <label for="" inp-Nombre Usuario">Datos personales</label>
+        <input type="name" name="" inp-Nombre Usuario" id="" inp-Nombre Usuario" placeholder="Nombre">
+        <input type="email" name="" inp-Email Usuario" id="" inp-Email Usuario" placeholder="Email">
+        <input type="password" name="" inp-Contrasena Usuario" id="" inp-Contrasena Usuario" placeholder="contraseña">
+        <input type="text" placeholder="breve descripción">>
         <button>Enviar</button>
       </form>
     </section>

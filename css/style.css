@@ -1,0 +1,42 @@
+@import "responsive.css";
+@import "footer.css"
+
+h1 {
+   margin-bottom: 0px; /* reduce espacio debajo del título */
+   padding-bottom: 0px;
+}
+
+
+nav {
+  margin-top: 0; /* elimina espacio extra arriba del nav */
+}
+* {
+   margin: 0 px;
+   padding: 0 cm;
+   box-sizing: border-box;
+}
+
+body {
+   font-family: Arial, sans-serif;
+   background-color: aquamarine;
+   color: #333;
+   line-height: 1.6
+}
+
+.section-container {
+   max-width: 1200px;
+   margin: 0 auto;
+}
+
+#header {
+   background-color: #1d1d1d;
+   position: fixed;
+   width: 100%;
+   top: 0;
+   padding: 0;
+   left: 0;
+}
+
+#header h1 {
+   color: white;
+}
