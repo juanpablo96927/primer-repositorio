@@ -1,0 +1,145 @@
+.footer {
+    background: linear-gradient(45deg, #ff00ff, #a100a1 50%), radial-gradient(circle at 20% 30%, #00d4ff, #0a0f1a 70%);
+    padding: 2rem 0;
+    color: var(--color-text-altern);
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.footer-container p {
+    font-size: 1rem;
+    font-weight: var(--font-normal);
+    margin: 0;
+}
+
+.footer-links {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.footer-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    color: var(--color-text-altern);
+    font-weight: var(--font-bold);
+    transition: color 0.3s, transform 0.3s;
+    position: relative;
+}
+
+.footer-link:hover {
+    color: var(--color-text-hover);
+    transform: scale(1.05);
+}
+
+.footer-link::after {
+    content: "";
+    background-color: var(--color-text-hover);
+    height: 2px;
+    width: 0;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    transition: width 0.3s;
+}
+
+.footer-link:hover::after {
+    width: 100%;
+}
+
+.footer-icon {
+    width: 20px;
+    height: 20px;
+    stroke: var(--color-text-altern);
+    transition: stroke 0.3s;
+}
+
+.footer-link:hover .footer-icon {
+    stroke: var(--color-text-hover);
+}
+
+/* Efecto de destello decorativo */
+.footer::before {
+    content: "";
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    width: 2px;
+    height: 50px;
+    background: #ffd700;
+    animation: flicker 3s infinite;
+    z-index: 1;
+}
+
+.footer::after {
+    content: "";
+    position: absolute;
+    top: 60%;
+    right: 15%;
+    width: 1px;
+    height: 70px;
+    background: #ffd700;
+    animation: flicker 4s infinite 1s;
+    z-index: 1;
+}
+
+@keyframes flicker {
+    0% { opacity: 0; height: 30px; }
+    50% { opacity: 1; height: 70px; }
+    100% { opacity: 0; height: 30px; }
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 1.5rem;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .footer-link {
+        font-size: 0.9rem;
+    }
+
+    .footer-icon {
+        width: 18px;
+        height: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer {
+        padding: 1.5rem 0;
+    }
+
+    .footer-container p {
+        font-size: 0.9rem;
+    }
+
+    .footer-link {
+        font-size: 0.8rem;
+    }
+
+    .footer-icon {
+        width: 16px;
+        height: 16px;
+    }
+}

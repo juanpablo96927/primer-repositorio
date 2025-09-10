@@ -1,0 +1,210 @@
+@import 'header-nav.css';
+@import "section-aboutme.css";
+@import "section-project.css";
+@import "bubbles.css";
+@import "contacts.css";
+@import "section-referencias.css";
+@import "carrusel.css";
+@import 'section-blg.css';
+@import 'footer.css';
+
+:root{
+    --color-text: #1d1d1d;
+    --color-second-heading: black;
+    --color-text-altern: #ffffff;
+    --color-text-hover: #2410ff;
+    --color-background: #001851;
+    --color-background-section:  #5f7cd3;
+    --color-background-altern: #7168a85d;
+    --color-background-alterna: #4b2cf8e9;
+    --font-normal: 400;
+    --font-bold: 700;
+    --img-widht: 300px;
+    --img-height: auto;
+}
+#3513f85d
+#415591
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Añadir al inicio o sobrescribir body */
+body {
+    font-family: Arial, sans-serif;
+    background: radial-gradient(circle at 20% 30%, #00d4ff, #0a0f1a 70%),
+                linear-gradient(45deg, #ff00ff, #a100a1 50%);
+    color: var(--color-text);
+    line-height: 1.6;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* Añadir destellos */
+body::before {
+    content: "";
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    width: 2px;
+    height: 100px;
+    background: #ffd700;
+    animation: flicker 3s infinite;
+    z-index: -1;
+}
+
+body::after {
+    content: "";
+    position: absolute;
+    top: 70%;
+    right: 20%;
+    width: 1px;
+    height: 150px;
+    background: #ffd700;
+    animation: flicker 4s infinite 1s;
+    z-index: -1;
+}
+
+@keyframes flicker {
+    0% { opacity: 0; height: 50px; }
+    50% { opacity: 1; height: 150px; }
+    100% { opacity: 0; height: 50px; }
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section-container{
+   padding: 4rem 20px;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 92%; /* Increased from 1200px */
+}
+
+.section-container:nth-child(even){
+    background-color: var(--color-background-altern);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.section-container:nth-child(odd){
+    background-color: var(--color-background-section);
+}
+
+.section-container h2{
+    font-size: 2.8rem;
+    font-weight: var(--font-bold);
+    color: var(--color-second-heading);
+    margin-bottom: 2rem;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+}
+
+.section-container h2::before{
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--color-text-hover), var(--color-text));
+    border-radius: 2px;
+}
+/* Añadir o sobrescribir en style.css */
+/* Añadir o sobrescribir en style.css */
+.bubble-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* Ocupa toda la altura de la sección */
+    overflow: hidden; /* Contiene las burbujas */
+    z-index: 1; /* Fondo */
+    background: transparent; /* Elimina el fondo azul #1e3a8a */
+}
+
+.section-container#contact {
+    position: relative; /* Base para .bubble-container */
+    padding: 4rem 20px; /* Mantén el padding original */
+    min-height: auto; /* Elimina altura fija para que se ajuste al contenido */
+}
+
+.contact-form {
+    position: relative;
+    z-index: 2; /* Asegura que el formulario esté encima */
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1rem;
+    background: rgba(10, 15, 26, 0.7); /* Fondo semitransparente */
+    border-radius: 10px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+label {
+    font-size: 1.1rem;
+    color: #00d4ff;
+    font-weight: var(--font-bold);
+}
+
+input, textarea {
+    padding: 0.8rem;
+    border: 2px solid #a100a1;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.05);
+    color: #e0f7fa;
+    font-size: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: #00d4ff;
+    box-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
+}
+
+textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.submit-btn {
+    padding: 0.8rem 1.5rem;
+    background: #ff00ff;
+    color: #e0f7fa;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: var(--font-bold);
+    transition: background 0.3s, transform 0.3s;
+}
+
+.submit-btn:hover {
+    background: #cc00cc;
+    transform: scale(1.05);
+}
+
+.form-message {
+    margin-top: 1rem;
+    padding: 0.5rem;
+    border-radius: 5px;
+    display: none;
+}
+
+.form-message.success {
+    display: block;
+    background: rgba(0, 255, 0, 0.1);
+    color: #00ff00;
+    border: 1px solid #00ff00;
+}

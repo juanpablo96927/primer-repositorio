@@ -1,0 +1,114 @@
+.container-contacts{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: right;
+}
+.contacts-a{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: right;
+}
+.contacts-b{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: left;
+}
+.contact-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+.contact-content h2 {
+    font-size: 2.5rem;
+    color: #00d4ff; /* Cian neón */
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.contact-form-wrapper {
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 1.5rem;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+label {
+    font-size: 1.1rem;
+    color: #00d4ff; 
+    font-weight: bold;
+}
+
+input, textarea {
+    padding: 0.8rem;
+    border: 2px solid #a100a1; 
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.05);
+    color: #e0f7fa; 
+    font-size: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: #00d4ff;
+    box-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
+}
+
+textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.submit-btn {
+    padding: 0.8rem 1.5rem;
+    background: #ff00ff; 
+    color: #e0f7fa;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.submit-btn:hover {
+    background: #cc00cc; 
+    transform: scale(1.05);
+}
+
+.form-message {
+    margin-top: 1rem;
+    padding: 0.5rem;
+    border-radius: 5px;
+    display: none;
+}
+
+.form-message.success {
+    display: block;
+    background: rgba(0, 255, 0, 0.1);
+    color: #00ff00;
+    border: 1px solid #00ff00;
+}
+
+.form-message.error {
+    display: block;
+    background: rgba(255, 0, 0, 0.1);
+    color: #ff0000;
+    border: 1px solid #ff0000;
+}

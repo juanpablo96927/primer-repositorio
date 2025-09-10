@@ -1,0 +1,128 @@
+.about-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* Dos columnas: izquierda más ancha */
+    gap: 2rem;
+    align-items: start;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+.about-left {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.about-container img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.about-text {
+    flex: 1;
+    text-align: justify;
+    line-height: 1.8;
+    color: var(--color-text-altern);
+}
+
+.about-text h3 {
+    font-size: 1.8rem;
+    color: #00d4ff;
+    margin-bottom: 1rem;
+}
+
+.about-text p {
+    font-size: 1rem;
+}
+
+.about-right {
+    display: flex;
+    flex-direction: column;
+}
+
+.skills {
+    text-align: center;
+}
+
+.skills h3 {
+    font-size: 1.8rem;
+    color: #00d4ff;
+    margin-bottom: 1rem;
+}
+
+.skills ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.skills li {
+    background-color: var(--color-text-hover);
+    border-radius: 20px;
+    text-align: center;
+    color: var(--color-text-altern);
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+}
+
+.carousel-container {
+    grid-column: 1 / -1; /* Ocupa todo el ancho */
+    margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+    .about-container {
+        grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
+        text-align: center;
+        gap: 1.5rem;
+    }
+
+    .about-left {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-container img {
+        margin: 0 auto;
+    }
+
+    .skills ul {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+
+    .skills li {
+        flex: 0 0 auto;
+        width: 100px;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-container {
+        padding: 1rem;
+    }
+
+    .about-text h3 {
+        font-size: 1.5rem;
+    }
+
+    .about-text p {
+        font-size: 0.9rem;
+    }
+
+    .skills h3 {
+        font-size: 1.5rem;
+    }
+
+    .skills li {
+        width: 80px;
+        font-size: 0.8rem;
+    }
+}
